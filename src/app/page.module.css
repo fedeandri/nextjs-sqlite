@@ -1,0 +1,71 @@
+.container {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+@media (min-width: 640px) {
+.container {
+flex-direction: row;
+gap: 2.5rem;
+}
+}
+.card {
+background-color: white;
+padding: 1.5rem;
+border-radius: 0.5rem;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+flex: 1;
+margin-bottom: 1rem;
+}
+.card h2 {
+font-size: 1.125rem;
+font-weight: 600;
+margin-bottom: 0;
+}
+.spinner {
+width: 20px;
+height: 20px;
+margin-top: 1rem;
+border: 2px solid #f3f3f3;
+border-top: 2px solid #2563eb;
+border-radius: 50%;
+animation: spin 1s linear infinite;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.flexRow {
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 0.25rem;
+}
+.navbar {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+background-color: #f3f4f6;
+padding: 0.5rem;
+border-radius: 0.25rem;
+border: 1px solid #d3d3d3;
+margin-bottom: 1.5rem;
+}
+.navbar a {
+text-decoration: none;
+color: #4b5563;
+padding: 0.5rem 1rem;
+border-radius: 0.25rem;
+border: 1px solid #d3d3d3;
+transition: background-color 0.3s ease;
+margin: 0.25rem;
+}
+.navbar a:hover {
+background-color: #d1d5db;
+color: black !important;
+}
+.navbar a.active {
+background-color: #2563eb;
+border: 1px solid #2563eb;
+color: white !important;
+}
