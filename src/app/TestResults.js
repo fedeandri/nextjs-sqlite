@@ -60,9 +60,16 @@ export default function TestResults() {
                         <ul>
                             <li>Duration: {testResults.duration ? testResults.duration.toLocaleString() : 'N/A'} seconds</li>
                             <li>DB size: {testResults.dbSizeInMb ? (testResults.dbSizeInMb >= 1024 ? `${(testResults.dbSizeInMb / 1024).toLocaleString(undefined, { maximumFractionDigits: 1 })}GB` : `${testResults.dbSizeInMb.toLocaleString()}MB`) : 'N/A'}</li>
-                            <li>Records processed: {testResults.total ? testResults.total.toLocaleString() : 'N/A'}</li>
-                            <li>Reads/sec: {testResults.readsPerSecond ? testResults.readsPerSecond.toLocaleString() : 'N/A'}</li>
+                            <li>Total operations: {testResults.totalOperations ? testResults.totalOperations.toLocaleString() : 'N/A'}</li>
+                            <li>Operations/sec: {testResults.operationsPerSecond ? testResults.operationsPerSecond.toLocaleString() : 'N/A'}</li>
+                            <li>Writes: {testResults.writes ? testResults.writes.toLocaleString() : 'N/A'}</li>
                             <li>Writes/sec: {testResults.writesPerSecond ? testResults.writesPerSecond.toLocaleString() : 'N/A'}</li>
+                            <li>Reads: {testResults.reads ? testResults.reads.toLocaleString() : 'N/A'}</li>
+                            <li>Reads/sec: {testResults.readsPerSecond ? testResults.readsPerSecond.toLocaleString() : 'N/A'}</li>
+                            <li>Updates: {testResults.updates ? testResults.updates.toLocaleString() : 'N/A'}</li>
+                            <li>Updates/sec: {testResults.updatesPerSecond ? testResults.updatesPerSecond.toLocaleString() : 'N/A'}</li>
+                            <li>Deletes: {testResults.deletes ? testResults.deletes.toLocaleString() : 'N/A'}</li>
+                            <li>Deletes/sec: {testResults.deletesPerSecond ? testResults.deletesPerSecond.toLocaleString() : 'N/A'}</li>
                         </ul>
                     ) : (
                         <div className={styles.flexRow}>
